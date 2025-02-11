@@ -31,14 +31,14 @@ const Post = ({ post }) => {
     }
 
     const likeOrDislikeHandler = async () => {
-
-        console.log("Hello");
+        
+      
         try {
             const action = liked ? 'dislike' : 'like';
 
-            console.log("Action: ",action);
+            
             const res = await axios.get(`http://localhost:8000/api/v1/post/${post._id}/${action}`, { withCredentials: true });
-            console.log("Response: ",res.data);
+            
             if (res.data.success) {
                 const updatedLikes = liked ? postLike - 1 : postLike + 1;
                 setPostLike(updatedLikes);
@@ -68,7 +68,7 @@ const Post = ({ post }) => {
                 },
                 withCredentials: true
             });
-            console.log(res.data);
+           
             if (res.data.success) {
                 const updatedCommentData = [...comment, res.data.comment];
                 setComment(updatedCommentData);
