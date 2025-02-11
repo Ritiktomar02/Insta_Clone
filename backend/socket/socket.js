@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = socketIo(server, {  // Use socketIo instead of `new Server`
     cors: {
-        origin: ['http://localhost:5173'],
+        origin: ['https://insta-clone-ge0o.onrender.com'],
         methods: ['GET', 'POST']
     }
 });
