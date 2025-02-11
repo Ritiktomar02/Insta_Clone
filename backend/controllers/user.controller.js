@@ -1,9 +1,10 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const getDataUri = require("../utils/dataUri.js");
+const getDataUri = require("../utils/datauri.js");
 const cloudinary = require("../utils/cloudinary.js");
 const Post = require("../models/post.model");
+
 exports.register = async (req, res) => {
     try {
         const { username, email, password } = req.body;
